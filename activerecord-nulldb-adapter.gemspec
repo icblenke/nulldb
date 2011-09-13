@@ -31,11 +31,11 @@ Gem::Specification.new do |s|
      "spec/nulldb_spec.rb",
      "spec/spec.opts"
   ]
-  s.homepage = %q{http://github.com/nulldb/nulldb}
+  s.homepage = %q{http://github.com/icblenke/nulldb}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{nulldb}
-  s.rubygems_version = %q{1.3.7}
+  s.rubygems_version = %q{1.5.3}
   s.summary = %q{The Null Object pattern as applied to ActiveRecord database adapters}
   s.test_files = [
     "spec/nulldb_spec.rb"
@@ -49,16 +49,16 @@ Gem::Specification.new do |s|
       if ENV['TEST_RAILS_3_1']
         s.add_runtime_dependency(%q<activerecord>, [">= 3.1.0.rc4"])
       else
-        s.add_runtime_dependency(%q<activerecord>, [">= 2.0.0", "< 3.1"])
+        s.add_runtime_dependency(%q<activerecord>, [">= 2.0.0", "< 3.2.0"])
       end
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_development_dependency(%q<rake>)
     else
-      s.add_dependency(%q<activerecord>, [">= 2.0.0", "< 3.1"])
+      s.add_dependency(%q<activerecord>, [">= 2.0.0", "<= 3.2.0"])
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
     end
   else
-    s.add_dependency(%q<activerecord>, [">= 2.0.0", "< 3.1"])
+    s.add_dependency(%q<activerecord>, [">= 2.0.0", "< 3.2"])
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
   end
 end
